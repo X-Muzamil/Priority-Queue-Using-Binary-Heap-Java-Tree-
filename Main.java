@@ -1,0 +1,20 @@
+class Main{
+
+    public static void main(String args[]){
+    MaxHeap mx = new MaxHeap(10);
+
+    mx.insert(4);
+    mx.insert(77);
+    mx.insert(33);
+    mx.insert(5);
+    mx.insert(1);
+    mx.insert(22);
+    mx.insert(8);
+    mx.insert(66);
+    mx.insert(121);
+    mx.insert(222);
+
+    mx.display();
+    }
+
+}
