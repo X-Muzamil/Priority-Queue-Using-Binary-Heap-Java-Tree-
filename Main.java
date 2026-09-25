@@ -25,6 +25,18 @@ class Main{
     System.out.println("Find index  " + mx.findIndex(5));
     System.out.println("Get max " + mx.getMax());
     mx.display();
+    
+
+    MinHeap mh = new MinHeap(6);
+
+        mh.insert(33);
+        mh.insert(99);
+        mh.insert(44);
+        mh.insert(55);
+        mh.insert(1);
+        mh.insert(2);
+
+        mh.display();
     }
 
 }
