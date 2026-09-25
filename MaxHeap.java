@@ -74,6 +74,26 @@ class MaxHeap{
 
 
 
+    int findIndex(int value){
+        for(int i = 0; i < size; i++){
+            if(heap[i] == value){
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    int getMax(){
+        if(size == 0){
+            System.out.println("Heap is empty");
+            return -1;
+        }
+
+        return heap[0];
+    }
+
+
+
     void display(){
         for(int i = 0; i < size; i++){
             System.out.print(heap[i] + " ");

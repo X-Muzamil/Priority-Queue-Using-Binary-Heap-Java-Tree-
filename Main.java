@@ -20,6 +20,11 @@ class Main{
     System.out.println();
     System.out.println("Delete max " + mx.deleteMax());
     mx.display();
+
+    System.out.println();
+    System.out.println("Find index  " + mx.findIndex(5));
+    System.out.println("Get max " + mx.getMax());
+    mx.display();
     }
 
 }
