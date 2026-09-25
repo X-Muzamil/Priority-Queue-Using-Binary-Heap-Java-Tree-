@@ -13,7 +13,12 @@ class Main{
     mx.insert(66);
     mx.insert(121);
     mx.insert(222);
-
+    mx.display();
+    System.out.println();
+    System.out.println("Delete max " + mx.deleteMax());
+    mx.display();
+    System.out.println();
+    System.out.println("Delete max " + mx.deleteMax());
     mx.display();
     }
 

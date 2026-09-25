@@ -39,10 +39,45 @@ class MaxHeap{
         }
     }
 
+    int deleteMax(){
+        if(size == 0){
+            System.out.println("Heap is Empty");
+            return -1;
+        }
+        int max = heap[0];
+        heap[0] = heap[size - 1];
+        shiftdown(0);
+        return max;
+    }
+
+    void shiftdown(int index){
+        while (true) {
+            int largest = index;
+            int left = 2 * index + 1;
+            int right = 2 * index + 2;
+
+            if(left < size && heap[left] > heap[largest])
+                largest = left;
+            if(right < size && heap[right] > heap[largest])
+                largest = right;
+            if(largest != index){
+                int temp = heap[index];
+                heap[index] = heap[largest];
+                heap[largest] = temp;
+                index = largest;
+            }
+            else{
+                break;
+            }
+        }
+    }
+
+
+
     void display(){
         for(int i = 0; i < size; i++){
-            System.out.println(heap[i] + " ");
+            System.out.print(heap[i] + " ");
         }
-        System.out.println();
+        
     }
 }
