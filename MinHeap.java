@@ -41,6 +41,45 @@ class MinHeap{
         }
     }
 
+    int deleteMin(){
+        if(size == 0){
+            System.out.println("The heap is empty");
+            return -1;
+        }
+
+        int min = heap[0];
+        heap[0] = heap[size - 1];
+        size--;
+        shiftDown(0);  
+        return min; 
+    }
+
+    void shiftDown(int index){
+        while(true){
+            int smallest = index;
+            int left = (2 * index + 1);
+            int right = (2 * index + 2);
+
+            if(left < size && heap[left] < heap[smallest])
+                smallest = left;
+            if(right < size && heap[right] < heap[smallest])
+                smallest = right;
+
+            if(smallest != index){
+                int temp = heap[index];
+                heap[index] = heap[smallest];
+                heap[smallest] = temp;
+
+                index = smallest;
+            }
+            else{
+                break;
+            }
+        }
+    }
+
+        
+
     void display(){
         for(int i = 0; i < size; i++){
             System.out.print(heap[i] + " ");

@@ -37,6 +37,9 @@ class Main{
         mh.insert(2);
 
         mh.display();
+
+        System.out.println("Delete Min" + mh.deleteMin());
+        mh.display();
     }
 
 }
